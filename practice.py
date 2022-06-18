@@ -149,6 +149,134 @@ for char in password_list:
 
 print(f"Here is your password: {password}")'''
 
+#SIMPLE FUNCTION
+'''def greet():
+    print("Hello there")
+    print("How are you doing?")
+    print("What's your name?")
+greet()'''
+
+#FUNCTION THAT ALLOWS INPUT
+'''def greet_with_name(name):
+    print(f"Hello {name}")
+    print(f"How are you doing {name}?")
+greet_with_name("Francis")'''
+
+#A PAINT CALCULATOR
+'''import math
+def Paint_calculator(height, width, cover):
+    area = height * width
+    paint_needed = math.ceil(area/coverage)
+    print(f"You'll need {paint_needed} cans of paint")
+
+user_height = int(input("Height of wall: "))
+user_width = int(input("width of wall: "))
+coverage = 5
+
+Paint_calculator(height= user_height, width=user_width, cover=coverage )'''
+
+#PRIME NUMBER CHECKER
+'''def prime_checker(number):
+    is_prime = True
+    for i in range(2, number-1):
+        if number % i == 0:
+            is_prime = False
+    if is_prime:   
+        print("It's a prime number")
+    else:
+        print("It's not a prime number")
+        
+n = int(input("Check this number: "))
+
+prime_checker(number=n)'''
+
+#DICTIONARIES
+'''programming_dictionary = {
+    "Bug": "An error in a program that prevents the program from running as expected",
+    "Function": "Apiece of code that you can call over and over again",
+    "Loop": "The action of doing something over and over again",
+}
+
+print(programming_dictionary["Bug"])'''
+
+'''student_scores = {
+    "Harry": 81,
+    "Ron": 78,
+    "Hermonie": 99,
+    "Draco": 74,
+    "Neville": 62,
+}
+
+student_grades = {}
+for student in student_scores:
+    score = student_scores[student]
+    if score > 90:
+        student_grades[student] = "Outstanding"
+    elif score > 80:
+        student_grades[student] = "Exceeds Expectation"
+    elif score > 70:
+        student_grades[student] = "Acceptable"
+    else:
+        student_grades[student] = "Fail"
+
+print(student_grades)'''
+
+#Dictionaries in lists
+'''travel_log = [
+    {
+        "country": "France",
+        "cities visited": ["Paris","Lille", "Dijon"],
+        "visits": "12",
+    },
+    {
+        "country": "Germany",
+        "cities visited": ["Berlin","Hamburg", "Stuttgart"],
+        "visits": "5",
+    },
+]
+
+def add_new_country(country_visited, cities_visited, times_visited):
+    new_country = {}
+    new_country["country"] = country_visited
+    new_country["cities visited"] = cities_visited
+    new_country["visits"] = times_visited
+    
+    travel_log.append(new_country)
+
+add_new_country(country_visited="Russia", cities_visited=["Moscow", "Saint Petersburg"], times_visited=2)
+
+print(travel_log)'''
+
+#Function with outputs
+'''def format_name(f_name, l_name):
+    formatted_f_name = f_name.title()
+    formatted_l_name = l_name.title()
+
+    return f"{formatted_f_name} {formatted_l_name}"
+print(format_name("WESa", "FraNcIS"))'''
+
+#Days in A Month
+'''def leap_year(year):
+    if year % 4 == 0:
+        if year % 100 == 0:
+            if year % 400 == 0:
+                return True
+            else:
+                return False
+        else:
+            return True
+    else:
+        return False
+
+def days_in_a_month(year, month):
+    month_days = [31, 28, 31, 30, 31, 30, 31, 30, 31, 30, 31, 30]
+    if leap_year(year) and month == 2:
+        return 29
+    return month_days[month - 1]'''
 
 
+year = int(input("Enter a Year: "))
+month = int(input("Enter a month: "))
+days = days_in_a_month(year, month)
+print(days)
 
