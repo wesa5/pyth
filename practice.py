@@ -272,11 +272,88 @@ def days_in_a_month(year, month):
     month_days = [31, 28, 31, 30, 31, 30, 31, 30, 31, 30, 31, 30]
     if leap_year(year) and month == 2:
         return 29
-    return month_days[month - 1]'''
+    return month_days[month - 1]
 
 
 year = int(input("Enter a Year: "))
 month = int(input("Enter a month: "))
 days = days_in_a_month(year, month)
-print(days)
+print(f"Days in the month: {days}")'''
+
+#staticmethods
+'''class sum:
+
+    @staticmethod
+    def getsum(*args):
+
+        sum = 0
+        for i in args:
+            sum += i
+        return sum
+
+def main():
+    print("Sum :", sum.getsum(10,6))
+
+main()'''
+
+#static variable
+'''class Dog:
+
+    num_of_dogs = 0
+
+    def __init__(self, name="Unknown"):
+        self.name = name
+
+        Dog.num_of_dogs += 1
+
+    @staticmethod
+    def getNumOfDogs():
+        print(f"There are currently {Dog.num_of_dogs} dogs")
+
+def main():
+
+    doug = Dog("Doug")
+    spot = Dog("Spot")
+
+    spot.getNumOfDogs()
+
+main()'''
+
+#EXCEPTION HANDLING
+'''try:
+    aList = [1,2,3]
+
+    print(aList[3])
+
+except IndexError:
+    print("Sorry that index does not exist")'''
+
+#RAIING AN EXCEPTION
+'''class DogNameError(Exception):
+
+    def __init__(self, *args, **kwargs):
+
+        Exception.__init__(self,*args, **kwargs)
+
+try:
+    DogName = input("What is yoour Dogs name? ")
+
+    if any(char.isdigit() for char in DogName):
+        raise DogNameError
+
+except DogNameError:
+    print("Your Dogs name can't contain digits")'''
+
+#FINALLY
+'''num1, num2 = (input("Enter 2 values to divide : ")).split()
+
+try:
+    quotient = int(num1) / int(num2)
+
+    print("{} / {} = {}".format(num1, num2, quotient))
+
+except ZeroDivisionError:
+    print("You cant divide by Zero")
+finally:
+    print("i execute no matter what")'''
 

@@ -106,7 +106,7 @@ droid2.die()
 
 Robot.how_many()'''
 
-class User:
+'''class User:
      id = 89
      name = "no name"
      __password = None
@@ -117,4 +117,21 @@ class User:
              self.name = new_name
  
 u = User()
-print(u.name)
+print(u.name)'''
+
+'''def uniq(list):
+    """ Returns unique values of a list """
+    u_list = []
+    for item in list:
+        if item not in u_list:
+            u_list.append(item)
+    return u_list'''
+
+'''class User:
+    id = 1
+
+
+u =User()
+u.id = 89
+User.id = 98
+print(u.id)'''
