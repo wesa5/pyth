@@ -135,3 +135,29 @@ u =User()
 u.id = 89
 User.id = 98
 print(u.id)'''
+
+'''a = [1, 2, 3, ]
+id(a)
+"""139926795932424"""
+
+a = a + [4]
+print(id(a))'''
+
+'''class Base():
+    """ My base class """
+
+    __nb_instances = 0
+
+    def __init__(self):
+        Base.__nb_instances += 1
+        self.id = Base.__nb_instances
+
+class User(Base):
+    """ My User class """
+
+    def __init__(self):
+        super().__init__()
+        self.id += 99
+
+u = User()
+print(u.id)'''
