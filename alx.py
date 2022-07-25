@@ -161,3 +161,29 @@ class User(Base):
 
 u = User()
 print(u.id)'''
+
+#Card ROULETTE PRACTICE
+'''import random
+
+names = input("Give me everyones name, separated by a coma: ")
+
+person_paying = names.split(",")
+
+# number_of_people = len(person_paying)
+# random_choice = random.randint(0, number_of_people - 1)
+# payer = person_paying[random_choice]
+payer = random.choice(person_paying)
+print(f"{payer} is the peron paying")'''
+
+#HEADS OR TAILS PRACTICE
+'''import random
+
+number_selected = input("create a number: ")
+
+random_choice = random.randint(0,1)
+
+if random_choice == 0:
+    print("Heads")
+else:
+    print("Tails")'''
+
