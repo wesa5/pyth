@@ -1,0 +1,3 @@
+Hello my name is Francis Wesa
+An aspiring Dev
+Learning more about python each day
